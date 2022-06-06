@@ -20,7 +20,7 @@
         <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
       </header>
 
-      <form>
+      <form id="my-form">
         <fieldset>
           <div class="fieldset-wrapper">
             <legend>Informações do Evento</legend>
@@ -28,7 +28,7 @@
               <label for="event-title"
                 >Título do envento <span>(mínimo 8 caracteres)</span></label
               >
-              <input type="text" id="event-tittle" />
+              <input required minlength="8" type="text" id="event-tittle" />
             </div>
 
             <div class="input-wrapper">
@@ -79,7 +79,7 @@
                   >(mínimo 8 caracteres)</span
                 ></label
               >
-              <input type="password" id="event-password" />
+              <input required minlength="8" type="password" id="event-password" />
             </div>
 
             <div class="checkbox-wrapper">
@@ -120,6 +120,10 @@
           </div>
         </fieldset>
       </form>
+
+      <footer>
+        <input form="my-form" class="button" type="submit" value="Salvar evento">
+      </footer>
     </div>
   </body>
 </html>
